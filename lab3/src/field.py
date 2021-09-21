@@ -10,12 +10,12 @@ def field(dicts: List[Dict], *args: List[str]) -> List:
         buf_dict = {}
         for key in dict.keys():
             if len(args) == 1:
-                if args.count(key) > 0:
+                if key in args:
                     return_value.append(dict[key])
             else:
-                if args.count(key) > 0:
+                if key in args:
                     buf_dict[key] = dict[key]
-        if len(args) > 1: return_value.append(str(buf_dict))
+        if len(args) > 1: return_value.append(buf_dict)
     
     
     return return_value
