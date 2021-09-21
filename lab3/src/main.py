@@ -1,3 +1,4 @@
+from sort import *
 from unique import Unique
 from field import field
 from gen_random import gen_random
@@ -8,6 +9,7 @@ goods = [
 ]
 data_int = [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
 data_str = ['a', 'A', 'b', 'B', 'a', 'A', 'b', 'B']
+data_sort = [4, -30, 30, 100, -100, 123, 1, 0, -1, -4]
 
 def test_field():
     print('\nTask 1-1: ', str(field(goods, 'title'))[1:-1])
@@ -25,10 +27,15 @@ def test_unique():
     print('Task 3-2 not ignoring case: ', str(list(Unique(data_str, ignore_case = False)))[1:-1])
     print('Task 3-3: ', str(list(Unique(gen_random(100, 1, 5))))[1:-1])
 
+def test_sort():
+    print('\nTask 4 without lambda: ', str(sort(data_sort))[1:-1])
+    print('Task 4 with lambda: ', str(sort_lambda(data_sort))[1:-1])
+
 def main():
     test_field()
     test_gen_random()
     test_unique()
+    test_sort()
 
 if __name__ == "__main__":
     main()
