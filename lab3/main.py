@@ -86,7 +86,7 @@ def main():
     test_timer()
 
     #uncomment this to test task 7
-    #test_process_data()
+    test_process_data()
 
 if __name__ == "__main__":
     main()
