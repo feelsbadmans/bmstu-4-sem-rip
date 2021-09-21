@@ -6,7 +6,7 @@ from gen_random import gen_random
 from print_result import print_result
 from unique import Unique
 
-path = 'lab3/src/data_light.json'
+path = 'lab3/data_light.json'
 
 def process_data():
     with open(path, encoding='utf-8') as f:
