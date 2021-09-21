@@ -1,10 +1,10 @@
+from cm_timer import *
 from field import field
 from gen_random import gen_random
 from print_result import print_result
+from process_data import process_data
 from sort import *
 from unique import Unique
-from cm_timer import *
-
 
 goods = [
     {'title': 'Ковер', 'price': 2000, 'color': 'green'},
@@ -68,10 +68,14 @@ def test_print_result():
 def test_timer():
     print('Task 6:\n')
     with cm_timer_1():
-        time.sleep(5.5)
+        time.sleep(1)
     with cm_timer_2():
-        time.sleep(5.5)
+        time.sleep(1)
     print('-------------------------------------------------------')
+
+def test_process_data():
+    print('Task 7:\n')
+    process_data()
 
 def main():
     test_field()
@@ -80,6 +84,9 @@ def main():
     test_sort()
     test_print_result()
     test_timer()
+
+    #uncomment this to test task 7
+    #test_process_data()
 
 if __name__ == "__main__":
     main()
