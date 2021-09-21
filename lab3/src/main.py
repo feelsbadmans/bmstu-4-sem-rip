@@ -1,8 +1,10 @@
-from sort import *
-from unique import Unique
 from field import field
 from gen_random import gen_random
 from print_result import print_result
+from sort import *
+from unique import Unique
+from cm_timer import *
+
 
 goods = [
     {'title': 'Ковер', 'price': 2000, 'color': 'green'},
@@ -63,12 +65,21 @@ def test_print_result():
     test_4()
     print('-------------------------------------------------------')
 
+def test_timer():
+    print('Task 6:\n')
+    with cm_timer_1():
+        time.sleep(5.5)
+    with cm_timer_2():
+        time.sleep(5.5)
+    print('-------------------------------------------------------')
+
 def main():
     test_field()
     test_gen_random()
     test_unique()
     test_sort()
     test_print_result()
+    test_timer()
 
 if __name__ == "__main__":
     main()
