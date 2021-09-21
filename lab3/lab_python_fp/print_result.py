@@ -12,3 +12,36 @@ def print_result(func):
             print(return_value)
         return return_value
     return decorated_func
+
+def test_print_result():
+    @print_result
+    def test_1():
+        return 1
+
+
+    @print_result
+    def test_2():
+        return 'iu5'
+
+
+    @print_result
+    def test_3():
+        return {'a': 1, 'b': 2}
+
+
+    @print_result
+    def test_4():
+        return [1, 2]
+
+    print('Task 5:\n')
+    test_1()
+    test_2()
+    test_3()
+    test_4()
+    print('-------------------------------------------------------')
+
+def main():
+    test_print_result()
+
+if __name__ == "__main__":
+    main()

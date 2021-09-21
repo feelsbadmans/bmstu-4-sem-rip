@@ -15,4 +15,18 @@ def cm_timer_2():
     start_time = time.time()
     yield
     print(cm_timer_2.__name__, time.time() - start_time)
-    
+
+def test_timer():
+    print('Task 6:\n')
+    with cm_timer_1():
+        time.sleep(5.5)
+    with cm_timer_2():
+        time.sleep(5.5)
+    print('-------------------------------------------------------')
+
+
+def main():
+    test_timer()
+
+if __name__ == "__main__":
+    main()

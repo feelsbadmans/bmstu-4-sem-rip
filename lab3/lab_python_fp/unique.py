@@ -1,4 +1,5 @@
 # Итератор для удаления дубликатов
+from gen_random import gen_random
 class Unique(object):
     def __init__(self, items, **kwargs):
         self.used_elements = set()
@@ -30,3 +31,19 @@ class Unique(object):
 
     def __iter__(self):
         return self
+
+data_int = [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
+data_str = ['a', 'A', 'b', 'B', 'a', 'A', 'b', 'B']
+
+def test_unique():
+    print('Task 3-1: ', str(list(Unique(data_int)))[1:-1])
+    print('Task 3-2 ignoring case: ', str(list(Unique(data_str, ignore_case = True)))[1:-1])
+    print('Task 3-2 not ignoring case: ', str(list(Unique(data_str, ignore_case = False)))[1:-1])
+    print('Task 3-3: ', str(list(Unique(gen_random(100, 1, 5))))[1:-1])
+    print('-------------------------------------------------------')
+
+def main():
+    test_unique()
+
+if __name__ == "__main__":
+    main()
