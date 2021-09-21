@@ -1,10 +1,10 @@
-from cm_timer import *
-from field import field
-from gen_random import gen_random
-from print_result import print_result
-from process_data import process_data
-from sort import *
-from unique import Unique
+from lab_python_fp.cm_timer import *
+from lab_python_fp.field import field
+from lab_python_fp.gen_random import gen_random
+from lab_python_fp.print_result import print_result
+from lab_python_fp.process_data import process_data
+from lab_python_fp.sort import *
+from lab_python_fp.unique import Unique
 
 goods = [
     {'title': 'Ковер', 'price': 2000, 'color': 'green'},

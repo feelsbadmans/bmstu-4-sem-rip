@@ -1,12 +1,12 @@
 import json
 
-from cm_timer import cm_timer_1
-from field import field
-from gen_random import gen_random
-from print_result import print_result
-from unique import Unique
+from lab_python_fp.cm_timer import cm_timer_1
+from lab_python_fp.field import field
+from lab_python_fp.gen_random import gen_random
+from lab_python_fp.print_result import print_result
+from lab_python_fp.unique import Unique
 
-path = 'lab3/data_light.json'
+path = 'lab3/json/data_light.json'
 
 def process_data():
     with open(path, encoding='utf-8') as f:
