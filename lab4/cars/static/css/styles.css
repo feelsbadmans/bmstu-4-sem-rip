@@ -68,3 +68,8 @@ td {
 .title {
     font-weight: 600;
 }
+
+.author {
+    width: 260px;
+    height: 180px;
+}
