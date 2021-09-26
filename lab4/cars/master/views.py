@@ -1,7 +1,10 @@
 from django.shortcuts import render
+from .models import Car
 
 def index(request):
-    return render(request, 'master/index.html')
+    cars = Car.objects.all()
+    return render(request, 'index.html', {'cars': cars})
 
-def details(request):
-    return render(request, 'master/details.html')
+def details(request, id):
+    car = Car.objects.get(id=id)
+    return render(request, 'details.html', {'car': car})
