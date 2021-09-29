@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}" type="text/css">
+    <title>{{car.name}}</title>
+</head>
+<body>
+    <div class="content-wrapper">
+        <a href="/" class="back">На главную</a>
+        <div class="flex row al-start">
+            <div class="flex column mg-32px">
+                <h1 class="header">{{car.name}}</h1>
+                <img src="/static/images/{{car.id}}.jpg" class="avatar"/>
+            </div>
+            <div class="flex column mg-32px">
+                <h3>Характеристики</h3>
+                <table>
+                    <tr>
+                        <td class="title">Кузов</td>
+                        <td>{{car.body}}</td>
+                    </tr>
+                    <tr>
+                        <td class="title">Год выпуска</td>
+                        <td>{{car.year}}</td>
+                    </tr>
+                    <tr>
+                        <td class="title">Число пассажиров</td>
+                        <td>{{car.passengers}}</td>
+                    </tr>
+                    <tr>
+                        <td class="title">Цвет</td>
+                        <td>{{car.color}}</td>
+                    </tr>
+                    <tr>
+                        <td class="title">Стоимость</td>
+                        <td>{{car.cost}}</td>
+                    </tr>
+                </table>
+            </div>            
+        </div>
+    </div>
+</body>
+</html>
