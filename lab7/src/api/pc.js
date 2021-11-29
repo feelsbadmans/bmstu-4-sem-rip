@@ -1,15 +1,15 @@
 import { host } from '../utils/api.js';
 
-export const getProcessors = () => {
+export const getPC = () => {
     return axios
-        .get(`${host}/processor`)
+        .get(`${host}/pc`)
         .then((res) => res.data)
         .catch((msg) => alert(msg))
 }
 
-export const getProcessorId = (id) => {
+export const getPCId = (id) => {
     return axios
-        .get(`${host}/processor/${id}`)
+        .get(`${host}/pc/${id}`)
         .then((res) => res.data)
         .catch((msg) => alert(msg))
 }

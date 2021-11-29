@@ -1,6 +1,9 @@
+import { Content } from "../../containers/content/Content.js";
+
 export class MainPage {
     constructor(parent) {
         this.parent = parent;
+        this.type = 'main';
     }
 
     getHtml() {
@@ -11,6 +14,10 @@ export class MainPage {
     
     render() {
         this.parent.setInnerHTML = '';
-        this.parent.insertAdjacentHTML('beforeend', this.getHtml())
+        this.parent.insertAdjacentHTML('beforeend', this.getHtml());
+        
+        const node = document.getElementById('main-page');
+        const container = new Content(node, this.type);
+        container.render();
     }
 }
