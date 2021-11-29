@@ -1,7 +1,6 @@
-import { MainPage } from "./pages/main/MainPage.js";
+import { Router } from "./router/router.js";
 
 const root = document.getElementById('root');
-console.log({root})
 
-const mainPage = new MainPage(root)
-mainPage.render()
+const router = new Router(root);
+router.render()

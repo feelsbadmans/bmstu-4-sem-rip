@@ -5,7 +5,7 @@ body {
     height: 100vh;
 }
 
-.root{
+#root{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,10 +15,18 @@ body {
     height: 100%;
 }
 
-.main {
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+}
+
+.main {
+    justify-content: center;
     align-items: center;
 }
 
@@ -31,4 +39,9 @@ body {
 
 h1, h2 {
     color: red;
+}
+
+.content-container {
+    justify-content: space-around;
+    align-items: center;
 }

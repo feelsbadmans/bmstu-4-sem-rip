@@ -1,16 +1,16 @@
-export class MainPage {
-    constructor(parent) {
+export class Content {
+    constructor(parent, children) {
         this.parent = parent;
+        this.children = children;
     }
 
     getHtml() {
         return `
-            <div class='col main' id='main-page'></div>
+        <div class='content-container col'></div>
         `
     }
     
     render() {
-        this.parent.setInnerHTML = '';
         this.parent.insertAdjacentHTML('beforeend', this.getHtml())
     }
 }
