@@ -130,3 +130,5 @@ dmypy.json
 bin/python3
 
 .vscode
+
+node_modules

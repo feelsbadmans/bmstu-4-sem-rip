@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .serializers import ProcSerializer
+from .serializers import PcSerializer, ProcSerializer
 from .models import Pc, Processor
 from rest_framework import viewsets
 
@@ -28,3 +28,8 @@ class ProcViewSet(viewsets.ModelViewSet):
     '''API endpoint'''
     queryset = Processor.objects.all()
     serializer_class = ProcSerializer
+
+class PcViewSet(viewsets.ModelViewSet):
+    '''API endpoint'''
+    queryset = Pc.objects.all()
+    serializer_class = PcSerializer
