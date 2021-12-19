@@ -3,6 +3,7 @@ import { PCInfo } from "../../components/pc/PCInfo.js";
 import { PCList } from "../../components/pc/PCList.js";
 import { ProcInfo } from "../../components/processor/ProcInfo.js";
 import { ProcList } from "../../components/processor/ProcList.js";
+import { Report } from "../../components/report/Report.js";
 
 export class Content {
     constructor(parent, children, data) {
@@ -41,6 +42,10 @@ export class Content {
             case 'pc-detail':
                 const pcInfo = new PCInfo(container, this.data);
                 pcInfo.render();
+                break;
+            case 'report':
+                const report = new Report(container, this.data);
+                report.render();
                 break;
         }
     }
