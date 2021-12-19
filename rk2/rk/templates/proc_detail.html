@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{proc.name}}</title>
+</head>
+<body>
+    <div>
+        <a href="/proc">Назад</a>
+        <h3>Характеристики</h3>
+        <table>
+            <tr>
+                <td>Название</td>
+                <td>{{proc.title}}</td>
+            </tr>
+            <tr>
+                <td>Кол-во ядер</td>
+                <td>{{proc.numb_cores}}</td>
+            </tr>
+            <tr>
+                <td>Тактовая частота</td>
+                <td>{{proc.freq}}</td>
+            </tr>
+            <tr>
+                <td>Год выпуска</td>
+                <td>{{proc.year}}</td>
+            </tr>
+            <tr>
+                <td>Цена</td>
+                <td>{{proc.price}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
