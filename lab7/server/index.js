@@ -3,8 +3,8 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const htmlPath = path.resolve(__dirname, '..', 'src/static/index.html')
-const staticPath = path.resolve(__dirname, '..', 'src/static')
+const htmlPath = path.resolve(__dirname, '..', 'src/index.html')
+const staticPath = path.resolve(__dirname, '..', 'src')
 const port = 3030;
 
 app.use('/', express.static(staticPath));

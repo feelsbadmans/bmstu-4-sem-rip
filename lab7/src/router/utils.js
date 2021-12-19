@@ -3,6 +3,7 @@ import { PCPage } from "../pages/pc/PC.js";
 import { PCDetailPage } from "../pages/pc/PCDetail.js";
 import { ProcPage } from "../pages/processor/Proc.js";
 import { ProcDetailPage } from "../pages/processor/ProcDetail.js";
+import { ReportPage } from "../pages/report/Report.js";
 
 export const getUrlParts = () => {
     return window.location.href.split('/').slice(3).join('').split('#');
@@ -23,6 +24,8 @@ export const onLocationChange = (parent) => {
                 case 'pc':
                     node = new PCPage(parent);
                     break;
+                case 'report':
+                    node = new ReportPage(parent);  
             }
             break;
         case 2:

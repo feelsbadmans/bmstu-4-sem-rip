@@ -8,6 +8,7 @@ export class MainList {
             <h1>Лабораторная работа №7</h1>
             <a href='/processor'>Процессоры</a>
             <a href='/pc'>Компьютеры</a>
+            <a href='/report'>Отчёт</a>
         `
     }
 
