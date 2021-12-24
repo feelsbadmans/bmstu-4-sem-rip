@@ -7,7 +7,7 @@ export const ProcessorList: React.FC = () => {
     const [processors, setProcessors] = useState<IProcessor[] | undefined>(undefined);
 
     useEffect(() => {
-        void getProcessors().then((data) => setProcessors(data));
+        void getProcessors().then((data) => setTimeout(() => setProcessors(data), 500));
     }, []);
 
     return processors ? (

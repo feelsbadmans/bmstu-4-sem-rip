@@ -7,7 +7,7 @@ export const PcList:React.FC = () => {
     const [pcs, setPcs] = useState<IPc[] | undefined>(undefined);
 
     useEffect(() => {
-        void getPC().then((data) => setPcs(data));
+        void getPC().then((data) => setTimeout(() => setPcs(data), 500));
     }, []);
 
     return pcs ? (

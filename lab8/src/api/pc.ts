@@ -20,9 +20,9 @@ export const getPC = (): Promise<IPc[]> => {
         });
 };
 
-export const getPCId = (id: number): Promise<IPc> => {
+export const getPCDetail = (id: string): Promise<IPc> => {
     return axios
-        .get<Promise<number>, AxiosResponse<IPc>>(`${host}/pc/${id}`)
+        .get<Promise<string>, AxiosResponse<IPc>>(`${host}/pc/${id}`)
         .then((res) => res.data)
         .catch((res: { status: string }) => {
             throw res?.status;

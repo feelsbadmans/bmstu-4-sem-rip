@@ -5,7 +5,7 @@ import { host } from 'utils/api';
 export interface IProcessor {
     id: number;
     title: string;
-    numbCores: number;
+    numb_cores: number;
     freq: number;
     price: number;
     year: number;
@@ -20,9 +20,9 @@ export const getProcessors = (): Promise<IProcessor[]> => {
         });
 };
 
-export const getProcessorId = (id: number): Promise<IProcessor> => {
+export const getProcessorDetail = (id: string): Promise<IProcessor> => {
     return axios
-        .get<Promise<number>, AxiosResponse<IProcessor>>(`${host}/processor/${id}`)
+        .get<Promise<string>, AxiosResponse<IProcessor>>(`${host}/processor/${id}`)
         .then((res) => res.data)
         .catch((res: { status: string }) => {
             throw res?.status;
