@@ -23,3 +23,10 @@ code {
   --size-header: 24px;
   --size-text: 16px;
 }
+
+@media screen and (max-width: 320px) {
+  :root {
+    --size-header: 22px;
+    --size-text: 14px;
+  }
+}

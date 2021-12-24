@@ -5,10 +5,10 @@ export const HEADER_LINKS = [
     },
     {
         text: 'Процессоры',
-        link: 'processors',
+        link: 'processor',
     },
     {
         text: 'Компьютеры',
-        link: 'pcs',
+        link: 'pc',
     },
 ]

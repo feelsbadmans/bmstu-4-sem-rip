@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 
-import { host } from 'utils/api.js';
+import { host } from 'utils/api';
 
 import { IProcessor } from './processor';
 
