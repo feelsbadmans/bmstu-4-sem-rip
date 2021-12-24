@@ -1,0 +1,1 @@
+export { PcDetail } from './PcDetail';

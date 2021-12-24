@@ -1,0 +1,26 @@
+.main {
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 50%;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-secondary);
+    }
+
+    &-header {
+        font-size: var(--size-header);
+    }
+
+    &-text {
+        font-size: var(--size-text);
+    }
+
+    &-image {
+        margin: 20px 0;
+        width: 30%;
+        height: 80%;
+    }
+}

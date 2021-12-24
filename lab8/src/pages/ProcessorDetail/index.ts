@@ -1,0 +1,1 @@
+export { ProcessorDetail } from './ProcessorDetail';
