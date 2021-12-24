@@ -1,0 +1,19 @@
+.header-button {
+    width: 120px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-secondary);
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        background-color: var(--color-hover);
+    }
+
+    &-text {
+        color: var(--color-primary);
+        font-size: var(--size-text);
+    }
+}
